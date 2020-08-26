@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>设计模式简单实践 | practice makes perfect</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/myblog/logo.png">
+    <meta name="description" content="Be the change you want to see in the world!">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/myblog/assets/css/0.styles.cf9e26c4.css" as="style"><link rel="preload" href="/myblog/assets/js/app.e2692b97.js" as="script"><link rel="preload" href="/myblog/assets/js/3.643a243b.js" as="script"><link rel="preload" href="/myblog/assets/js/1.15ab7d5d.js" as="script"><link rel="preload" href="/myblog/assets/js/29.f97eefe1.js" as="script"><link rel="prefetch" href="/myblog/assets/js/10.cf1dd999.js"><link rel="prefetch" href="/myblog/assets/js/11.d1fba595.js"><link rel="prefetch" href="/myblog/assets/js/12.49a35545.js"><link rel="prefetch" href="/myblog/assets/js/13.24bc60ac.js"><link rel="prefetch" href="/myblog/assets/js/14.ea7e51df.js"><link rel="prefetch" href="/myblog/assets/js/15.1c17a0d4.js"><link rel="prefetch" href="/myblog/assets/js/16.e9513fb0.js"><link rel="prefetch" href="/myblog/assets/js/17.10c61b39.js"><link rel="prefetch" href="/myblog/assets/js/18.197011f4.js"><link rel="prefetch" href="/myblog/assets/js/19.438c4acb.js"><link rel="prefetch" href="/myblog/assets/js/20.adcd5d04.js"><link rel="prefetch" href="/myblog/assets/js/21.abc90e7e.js"><link rel="prefetch" href="/myblog/assets/js/22.a2f52c74.js"><link rel="prefetch" href="/myblog/assets/js/23.e3d157d5.js"><link rel="prefetch" href="/myblog/assets/js/24.a3a02485.js"><link rel="prefetch" href="/myblog/assets/js/25.83c5a05b.js"><link rel="prefetch" href="/myblog/assets/js/26.9b44d41c.js"><link rel="prefetch" href="/myblog/assets/js/27.1ffb7c5b.js"><link rel="prefetch" href="/myblog/assets/js/28.16e5a2ab.js"><link rel="prefetch" href="/myblog/assets/js/30.35be2812.js"><link rel="prefetch" href="/myblog/assets/js/31.889470dd.js"><link rel="prefetch" href="/myblog/assets/js/32.45f6f278.js"><link rel="prefetch" href="/myblog/assets/js/33.0212f8d9.js"><link rel="prefetch" href="/myblog/assets/js/34.70024183.js"><link rel="prefetch" href="/myblog/assets/js/35.77f18f5d.js"><link rel="prefetch" href="/myblog/assets/js/36.05967d54.js"><link rel="prefetch" href="/myblog/assets/js/37.62382d05.js"><link rel="prefetch" href="/myblog/assets/js/38.3a6dbd0a.js"><link rel="prefetch" href="/myblog/assets/js/39.f2fd6fd5.js"><link rel="prefetch" href="/myblog/assets/js/4.ef4326c4.js"><link rel="prefetch" href="/myblog/assets/js/40.850db6f2.js"><link rel="prefetch" href="/myblog/assets/js/41.02b072f8.js"><link rel="prefetch" href="/myblog/assets/js/42.14cbe669.js"><link rel="prefetch" href="/myblog/assets/js/5.e628a958.js"><link rel="prefetch" href="/myblog/assets/js/6.82cbc161.js"><link rel="prefetch" href="/myblog/assets/js/7.80c6ab6c.js"><link rel="prefetch" href="/myblog/assets/js/8.1e6c6b33.js"><link rel="prefetch" href="/myblog/assets/js/9.d82d6dd3.js">
+    <link rel="stylesheet" href="/myblog/assets/css/0.styles.cf9e26c4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-19557b78><div data-v-19557b78><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-19557b78 data-v-19557b78><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-19557b78 data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>practice makes perfect</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>sera Ren</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div class="hide" data-v-19557b78><header class="navbar" data-v-19557b78><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/myblog/" class="home-link router-link-active"><img src="/myblog/logo.png" alt="practice makes perfect" class="logo"> <span class="site-name">practice makes perfect</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/myblog/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myblog/categories/Essays/" class="nav-link"><i class="iconfont undefined"></i>
+  Essays
+</a></li><li class="dropdown-item"><!----> <a href="/myblog/categories/frontEnd/" class="nav-link router-link-active"><i class="iconfont undefined"></i>
+  frontEnd
+</a></li><li class="dropdown-item"><!----> <a href="/myblog/categories/algorithm/" class="nav-link"><i class="iconfont undefined"></i>
+  algorithm
+</a></li><li class="dropdown-item"><!----> <a href="/myblog/categories/other/" class="nav-link"><i class="iconfont undefined"></i>
+  other
+</a></li></ul></div></div><div class="nav-item"><a href="/myblog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/myblog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.jianshu.com/u/e4178d3b37a4" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/renyalove?tab=repositories" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      高级
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>算法</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myblog/language/chinese.html" class="nav-link"><i class="iconfont undefined"></i>
+  冒泡
+</a></li><li class="dropdown-subitem"><a href="/myblog/language/japanese.html" class="nav-link"><i class="iconfont undefined"></i>
+  快速
+</a></li></ul></li><li class="dropdown-item"><h4>设计模式</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myblog/language/chinese.html" class="nav-link"><i class="iconfont undefined"></i>
+  工厂
+</a></li><li class="dropdown-subitem"><a href="/myblog/language/chinese.html" class="nav-link"><i class="iconfont undefined"></i>
+  单例
+</a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-19557b78></div> <aside class="sidebar" data-v-19557b78><div class="personal-info-wrapper" data-v-042e23d4><img src="/myblog/logo.png" alt="author-avatar" class="personal-img" data-v-042e23d4> <h3 class="name" data-v-042e23d4>
+    sera Ren
+  </h3> <div class="num" data-v-042e23d4><div data-v-042e23d4><h3 data-v-042e23d4>17</h3> <h6 data-v-042e23d4>Article</h6></div> <div data-v-042e23d4><h3 data-v-042e23d4>13</h3> <h6 data-v-042e23d4>Tag</h6></div></div> <hr data-v-042e23d4></div> <nav class="nav-links"><div class="nav-item"><a href="/myblog/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/myblog/categories/Essays/" class="nav-link"><i class="iconfont undefined"></i>
+  Essays
+</a></li><li class="dropdown-item"><!----> <a href="/myblog/categories/frontEnd/" class="nav-link router-link-active"><i class="iconfont undefined"></i>
+  frontEnd
+</a></li><li class="dropdown-item"><!----> <a href="/myblog/categories/algorithm/" class="nav-link"><i class="iconfont undefined"></i>
+  algorithm
+</a></li><li class="dropdown-item"><!----> <a href="/myblog/categories/other/" class="nav-link"><i class="iconfont undefined"></i>
+  other
+</a></li></ul></div></div><div class="nav-item"><a href="/myblog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/myblog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://www.jianshu.com/u/e4178d3b37a4" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-jianshu"></i>
+  简书
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://github.com/renyalove?tab=repositories" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      高级
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>算法</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myblog/language/chinese.html" class="nav-link"><i class="iconfont undefined"></i>
+  冒泡
+</a></li><li class="dropdown-subitem"><a href="/myblog/language/japanese.html" class="nav-link"><i class="iconfont undefined"></i>
+  快速
+</a></li></ul></li><li class="dropdown-item"><h4>设计模式</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/myblog/language/chinese.html" class="nav-link"><i class="iconfont undefined"></i>
+  工厂
+</a></li><li class="dropdown-subitem"><a href="/myblog/language/chinese.html" class="nav-link"><i class="iconfont undefined"></i>
+  单例
+</a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>设计模式简单实践</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/myblog/categories/frontEnd/javascript/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#_1-介绍一下单一职责原则和开放封闭原则" class="sidebar-link">1. 介绍一下单一职责原则和开放封闭原则</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/myblog/categories/frontEnd/javascript/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#_2-单例模式" class="sidebar-link">2. 单例模式</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/myblog/categories/frontEnd/javascript/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#_3-工厂模式" class="sidebar-link">3. 工厂模式</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/myblog/categories/frontEnd/javascript/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#_4-观察者模式" class="sidebar-link">4. 观察者模式</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/myblog/categories/frontEnd/javascript/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#_5-装饰器模式" class="sidebar-link">5. 装饰器模式</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/myblog/categories/frontEnd/javascript/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#_6-适配器模式" class="sidebar-link">6. 适配器模式</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/myblog/categories/frontEnd/javascript/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html#_7-代理模式" class="sidebar-link">7. 代理模式</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-19557b78><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>设计模式简单实践</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>sera Ren</span>
+            
+          <!---->
+          2020
+        </a></span></div></div> <div data-v-19557b78><main class="page"><div class="page-title" style="display:none;"><h1>设计模式简单实践</h1> <hr> <div data-v-34ea29db><i class="iconfont reco-account" data-v-34ea29db><span data-v-34ea29db>sera Ren</span></i> <i class="iconfont reco-date" data-v-34ea29db><span data-v-34ea29db>2020-08-19</span></i> <!----> <i class="iconfont reco-tag tags" data-v-34ea29db><span class="tag-item" data-v-34ea29db>js基础</span><span class="tag-item" data-v-34ea29db>设计模式</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h1 id="设计模式"><a href="#设计模式" class="header-anchor">#</a> 设计模式</h1> <p>设计模式有许多种，这里挑出几个常用的：</p> <table><thead><tr><th style="text-align:center;">设计模式</th> <th style="text-align:center;">描述</th> <th style="text-align:center;">例子</th></tr></thead> <tbody><tr><td style="text-align:center;">单例模式</td> <td style="text-align:center;">一个类只能构造出唯一实例</td> <td style="text-align:center;">Redux/Vuex的store</td></tr> <tr><td style="text-align:center;">工厂模式</td> <td style="text-align:center;">对创建对象逻辑的封装</td> <td style="text-align:center;">jQuery的$(selector)</td></tr> <tr><td style="text-align:center;">观察者模式</td> <td style="text-align:center;">当一个对象被修改时，会自动通知它的依赖对象</td> <td style="text-align:center;">Redux的subscribe、Vue的双向绑定</td></tr> <tr><td style="text-align:center;">装饰器模式</td> <td style="text-align:center;">对类的包装，动态地拓展类的功能</td> <td style="text-align:center;">React高阶组件、ES7 装饰器</td></tr> <tr><td style="text-align:center;">适配器模式</td> <td style="text-align:center;">兼容新旧接口，对类的包装</td> <td style="text-align:center;">封装旧API</td></tr> <tr><td style="text-align:center;">代理模式</td> <td style="text-align:center;">控制对象的访问</td> <td style="text-align:center;">事件代理、ES6的Proxy</td></tr></tbody></table> <h2 id="_1-介绍一下单一职责原则和开放封闭原则"><a href="#_1-介绍一下单一职责原则和开放封闭原则" class="header-anchor">#</a> 1. 介绍一下单一职责原则和开放封闭原则</h2> <ul><li><strong>单一职责原则</strong>：一个类只负责一个功能领域中的相应职责，或者可以定义为：就一个类而言，应该只有一个引起它变化的原因。</li> <li><strong>开放封闭原则</strong>：核心的思想是软件实体（类、模块、函数等）是可扩展的、但不可修改的。也就是说,对扩展是开放的,而对修改是封闭的。</li></ul> <h2 id="_2-单例模式"><a href="#_2-单例模式" class="header-anchor">#</a> 2. 单例模式</h2> <p>单例模式即一个类只能构造出唯一实例，单例模式的意义在于<strong>共享、唯一</strong>，<code>Redux/Vuex</code>中的store、<code>JQ</code>的$或者业务场景中的购物车、登录框都是单例模式的应用</p> <div class="language- extra-class"><pre class="language-text"><code>class SingletonLogin {
+  constructor(name,password){
+    this.name = name
+    this.password = password
+  }
+  static getInstance(name,password){
+    //判断对象是否已经被创建,若创建则返回旧对象
+    if(!this.instance)this.instance = new SingletonLogin(name,password)
+    return this.instance
+  }
+}
+ 
+let obj1 = SingletonLogin.getInstance('CXK','123')
+let obj2 = SingletonLogin.getInstance('CXK','321')
+ 
+console.log(obj1===obj2)    // true
+console.log(obj1)           // {name:CXK,password:123}
+console.log(obj2)           // 输出的依然是{name:CXK,password:123}
+ 
+</code></pre></div><h2 id="_3-工厂模式"><a href="#_3-工厂模式" class="header-anchor">#</a> 3. 工厂模式</h2> <p>工厂模式即对创建对象逻辑的封装，或者可以简单理解为对<code>new</code>的封装，这种封装就像创建对象的工厂，故名工厂模式。工厂模式常见于大型项目，比如JQ的$对象，我们创建选择器对象时之所以没有new selector就是因为$()已经是一个工厂方法，其他例子例如<code>React.createElement()</code>、<code>Vue.component()</code>都是工厂模式的实现。工厂模式有多种：<code>简单工厂模式</code>、<code>工厂方法模式</code>、<code>抽象工厂模式</code>，这里只以简单工厂模式为例：</p> <div class="language- extra-class"><pre class="language-text"><code>class User {
+  constructor(name, auth) {
+    this.name = name
+    this.auth = auth
+  }
+}
+
+class UserFactory {
+  static createUser(name, auth) {
+    //工厂内部封装了创建对象的逻辑:权限为admin时,auth传1,而使用者在外部创建对象时,不需要知道admin对应哪个字段
+    if(auth === 'admin')  new User(name, 1)
+    if(auth === user)  new User(name, 2)
+  }
+}
+
+const admin = UserFactory.createUser('admin');
+const user = UserFactory.createUser('user');
+ 
+</code></pre></div><h2 id="_4-观察者模式"><a href="#_4-观察者模式" class="header-anchor">#</a> 4. 观察者模式</h2> <p>观察者模式算是前端最常用的设计模式了，观察者模式概念很简单：观察者监听被观察者的变化，被观察者发生改变时，通知所有的观察者。观察者模式被广泛用于监听事件的实现，有关观察者模式的详细应用，可以看我另一篇讲解<a href="https://juejin.im/post/5def4831e51d45584b585000#heading-3" target="_blank" rel="noopener noreferrer">Redux实现的文章<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language- extra-class"><pre class="language-text"><code>//观察者
+class Observer {    
+  constructor (fn) {      
+    this.update = fn    
+  }
+}
+//被观察者
+class Subject {    
+    constructor() {        
+        this.observers = []          //观察者队列 
+    }    
+    addObserver(observer) {          
+        this.observers.push(observer)//往观察者队列添加观察者 
+    }    
+    notify() {                       //通知所有观察者,实际上是把观察者的update()都执行了一遍 
+        this.observers.forEach(observer =&gt; {        
+            observer.update()            //依次取出观察者,并执行观察者的update方法 
+        })    
+    }
+}
+
+var subject = new Subject()       //被观察者
+const update = () =&gt; {console.log('被观察者发出通知')}  //收到广播时要执行的方法
+var ob1 = new Observer(update)    //观察者1
+var ob2 = new Observer(update)    //观察者2
+subject.addObserver(ob1)          //观察者1订阅subject的通知
+subject.addObserver(ob2)          //观察者2订阅subject的通知
+subject.notify()                  //发出广播,执行所有观察者的update方法
+ 
+</code></pre></div><p>有些文章也把观察者模式称为发布订阅模式，其实二者是有所区别的，发布订阅相较于观察者模式多一个调度中心。</p> <h2 id="_5-装饰器模式"><a href="#_5-装饰器模式" class="header-anchor">#</a> 5. 装饰器模式</h2> <p>装饰器模式，可以理解为对类的一个包装，动态地拓展类的功能，ES7的<code>装饰器</code>语法以及React中的<code>高阶组件</code>（HoC）都是这一模式的实现。react-redux的connect()也运用了装饰器模式，这里以ES7的装饰器为例：</p> <div class="language- extra-class"><pre class="language-text"><code>function info(target) {
+  target.prototype.name = '张三'
+  target.prototype.age = 10
+}
+
+@info
+class Man {}
+
+let man = new Man()
+man.name // 张三
+ 
+</code></pre></div><h2 id="_6-适配器模式"><a href="#_6-适配器模式" class="header-anchor">#</a> 6. 适配器模式</h2> <p>适配器模式，将一个接口转换成客户希望的另一个接口，使接口不兼容的那些类可以一起工作。我们在生活中就常常有使用适配器的场景，例如出境旅游插头插座不匹配，这时我们就需要使用转换插头，也就是适配器来帮我们解决问题。</p> <div class="language- extra-class"><pre class="language-text"><code>class Adaptee {
+  test() {
+      return '旧接口'
+  }
+}
+ 
+class Target {
+  constructor() {
+      this.adaptee = new Adaptee()
+  }
+  test() {
+      let info = this.adaptee.test()
+      return `适配${info}`
+  }
+}
+ 
+let target = new Target()
+console.log(target.test())
+ 
+</code></pre></div><h2 id="_7-代理模式"><a href="#_7-代理模式" class="header-anchor">#</a> 7. 代理模式</h2> <p>代理模式，为一个对象找一个替代对象，以便对原对象进行访问。即在访问者与目标对象之间加一层代理，通过代理做授权和控制。最常见的例子是经纪人代理明星业务，假设你作为一个投资者，想联系明星打广告，那么你就需要先经过代理经纪人，经纪人对你的资质进行考察，并通知你明星排期，替明星本人过滤不必要的信息。事件代理、<code>JQuery的$.proxy</code>、ES6的<code>proxy</code>都是这一模式的实现，下面以ES6的proxy为例：</p> <div class="language- extra-class"><pre class="language-text"><code>const idol = {
+  name: 'sera',
+  phone: 10086,
+  price: 1000000  //报价
+}
+
+const agent = new Proxy(idol, {
+  get: function(target) {
+    //拦截明星电话的请求,只提供经纪人电话
+    return '经纪人电话:10010'
+  },
+  set: function(target, key, value) {
+    if(key === 'price' ) {
+      //经纪人过滤资质
+      if(value &lt; target.price) throw new Error('报价过低')
+      target.price = value
+    }
+  }
+})
+
+agent.phone        //经纪人电话:10010
+agent.price = 100  //Uncaught Error: 报价过低
+ 
+</code></pre></div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-44bd5a18 data-v-44bd5a18><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-44bd5a18><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-44bd5a18></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-44bd5a18></path></svg></div></div></div>
+    <script src="/myblog/assets/js/app.e2692b97.js" defer></script><script src="/myblog/assets/js/3.643a243b.js" defer></script><script src="/myblog/assets/js/1.15ab7d5d.js" defer></script><script src="/myblog/assets/js/29.f97eefe1.js" defer></script>
+  </body>
+</html>
